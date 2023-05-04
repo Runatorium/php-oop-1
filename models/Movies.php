@@ -11,7 +11,7 @@ class Movie
         $titolo,
         $originalLang,
         $durata,
-        $genere
+        genre $genere
     ) {
 
         $this->title = $titolo;
@@ -27,8 +27,22 @@ class Movie
             echo "il film è corto, dura solo " . $this->Length . " ore";
         }
     }
+}
 
+class Genre
+{
+    public $genre1;
+    public $genre2;
+    public $genre3;
 
-
+    function __construct(
+        $genereMain,
+        $genereSecond,
+        $genereThird
+    ) {
+        $this->genre1 = $genereMain;
+        $this->genre2 = $genereSecond;
+        $this->genre3 = $genereThird;
+    }
 }
 ?>
